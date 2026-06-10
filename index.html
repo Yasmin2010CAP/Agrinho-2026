@@ -3,79 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Os Pilares do Agro Sustentável</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Projeto Agrinho 2026 - Início</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f0;
+            color: #333333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.modo-escuro {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .topo {
+            background-color: #1b4d3e;
+            color: #ffffff;
+            padding: 25px;
+            text-align: left;
+        }
+
+        .topo h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .menu {
+            background-color: #654321;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .menu a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .menu a:hover {
+            color: #50c878;
+        }
+
+        .menu a.pagina-atual {
+            font-weight: bold;
+            border-bottom: 2px solid #ffffff;
+        }
+
+        .banner {
+            background-color: #1b4d3e;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .banner-titulo {
+            color: #ffffff;
+            font-size: 34px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .banner-subtitulo {
+            color: #e0e0e0;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .banner-foto {
+            width: 100%;
+            max-width: 1000px;
+            max-height: 550px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn-interativo {
+            background-color: #50c878;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .texto-principal {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        .rodape {
+            background-color: #1b4d3e;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 10px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .topo h1 { font-size: 24px; }
+            .banner-titulo { font-size: 24px; }
+            .menu a { display: block; margin: 10px 0; }
+            .texto-principal { font-size: 16px; }
+        }
+    </style>
 </head>
 <body>
 
-    <header class="topo-site">
+    <header class="topo">
         <h1>Projeto Agrinho 2026</h1>
     </header>
 
-    <nav class="menu-navegacao">
-        <a href="index.html">Início</a>
-        <a href="projeto.html" class="ativo">O Projeto</a>
+    <nav class="menu">
+        <a href="index.html" class="pagina-atual">Início</a>
+        <a href="projeto.html">O Projeto</a>
         <a href="sustentabilidade.html">Sustentabilidade</a>
         <a href="contato.html">Contato</a>
     </nav>
 
-    <button id="btn-modo" class="btn-acessibilidade">🌙 Ativar Modo Escuro</button>
+    <section class="banner">
+        <h2 class="banner-titulo">Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h2>
+        <p class="banner-subtitulo">Tecnologia e consciência transformando o futuro da nossa agricultura.</p>
+        
+        <img src="img/image.png" alt="Equilíbrio entre produção e meio ambiente" class="banner-foto">
+    </section>
 
-    <main class="conteudo-container">
-        <h2 class="titulo-secao">Os pilares do agro sustentável</h2>
-        <p class="subtitulo-secao">
-            Conheça os elements que tornam possível a harmonia entre produção agrícola e preservação ambiental.
+    <button id="btn-modo" class="btn-interativo">🌙 Alternar Visualização</button>
+
+    <main class="container">
+        <p class="texto-principal">
+            O equilíbrio entre produção e meio ambiente é muito importante para o futuro do planeta. O agronegócio tem um papel fundamental na produção de alimentos, mas também precisa cuidar dos recursos naturais que tornam essa produção possível.
         </p>
-
-        <article class="card">
-            <h3>Produção Sustentável</h3>
-            <p class="texto-bloco">
-                A produção sustentável tem como objetivo atender à crescente demanda por alimentos sem comprometer os recursos naturais. Atualmente, o setor agrícola conta com técnicas que permitem aumentar a produtividade utilizando melhor o solo, a água e os insumos. Dessa forma, é possível produzir mais em áreas já utilizadas, reduzindo a necessidade de abertura de novas áreas e contribuindo para a preservação ambiental.
-            </p>
-            <div class="dados-comprovam">
-                <strong>Dados que Comprovam:</strong> O Brasil recuperou cerca de 26,8 milhões de hectares de pastagens degradadas entre 2010 e 2018, demonstrando que é possível ampliar a produção agrícola por meio da recuperação de áreas já existentes, sem a necessidade de avançar sobre novas áreas naturais.
-                <span class="fonte-dado">Fonte: Ministério da Agricultura</span>
-            </div>
-        </article>
-
-        <article class="card">
-            <h3>Conservação Ambiental</h3>
-            <p class="texto-bloco">
-                A conservação ambiental é um dos fatores mais importantes para a sustentabilidade no campo. A proteção das florestas, dos rios e da biodiversidade ajuda a manter o equilíbrio dos ecossistemas, além de garantir condições adequadas para a produção agrícola. Preservar a natureza não significa impedir o desenvolvimento, mas assegurar que os recursos naturais continuem disponíveis para as próximas gerações.
-            </p>
-            <div class="dados-comprovam">
-                <strong>Dados que Comprovam:</strong> Cerca de 66% do território brasileiro permanece coberto por vegetação nativa, colocando o Brasil entre os países com maior área preservada do mundo.
-                <span class="fonte-dado">Fonte: Embrapa</span>
-            </div>
-        </article>
-
-        <article class="card">
-            <h3>Inovação no Campo</h3>
-            <p class="texto-bloco">
-                A tecnologia tem desempenhado um papel cada vez mais importante na agricultura moderna. O uso de drones, sensores, imagens de satélite e sistemas inteligentes permite acompanhar as condições das lavouras em tempo real, tornando a produção mais eficiente. Essas ferramentas ajudam a reduzir desperdícios, otimizar recursos e diminuir impactos ambientais, demonstrando que inovação e sustentabilidade podem caminhar juntas.
-            </p>
-            <div class="dados-comprovam">
-                <strong>Dados que Comprovam:</strong> A agricultura de precisão permite reduzir significativamente o desperdício de água, fertilizantes e outros insumos, tornando a produção mais eficiente e sustentável.
-                <span class="fonte-dado">Fonte: Embrapa</span>
-            </div>
-        </article>
-
-        <article class="card">
-            <h3>Futuro Sustentável</h3>
-            <p class="texto-bloco">
-                Construir um futuro sustentável exige planejamento, responsabilidade e cooperação entre diferentes setores da sociedade. O equilíbrio entre produção e preservação ambiental é fundamental para garantir alimentos, recursos naturais e qualidade de vida para as próximas gerações. Por isso, investir em práticas sustentáveis hoje é uma forma de preparar um futuro mais seguro e equilibrado para todos.
-            </p>
-            <div class="dados-comprovam">
-                <strong>Dados que Comprovam:</strong> Segundo a Organização das Nações Unidas (ONU), a população mundial poderá ultrapassar 9,7 bilhões de pessoas até 2050, reforçando a necessidade de aumentar a produção de alimentos de maneira sustentável e responsável.
-                <span class="fonte-dado">Fonte: ONU</span>
-            </div>
-        </article>
+        
+        <p class="texto-principal">
+            Hoje, graças ao avanço da tecnologia e à adoção de práticas mais sustentáveis, é possível produzir mais sem prejudicar tanto a natureza. A preservação da água, do solo e das florestas contribui para que o campo continue sendo produtivo por muitos anos.
+        </p>
+        
+        <p class="texto-principal">
+            Por isso, buscar esse equilíbrio é uma responsabilidade de todos. Produzir com consciência e preservar o meio ambiente são atitudes que ajudam a construir um futuro melhor para as próximas gerações.
+        </p>
     </main>
 
-    <footer class="rodape-site">
+    <footer class="rodape">
         <p>Concurso Agrinho 2026 - Desenvolvido em Aula</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const botaoModo = document.getElementById('btn-modo');
+        botaoModo.addEventListener('click', function() {
+            document.body.classList.toggle('modo-escuro');
+            if (document.body.classList.contains('modo-escuro')) {
+                botaoModo.innerText = "☀️ Ativar Modo Claro";
+            } else {
+                botaoModo.innerText = "🌙 Ativar Modo Escuro";
+            }
+        });
+    </script>
 </body>
 </html>
