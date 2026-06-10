@@ -107,4 +107,4 @@ function calcularCarbono() {
             <p style="font-style: italic; margin-top: 12px; margin-bottom: 0; color: #555555; opacity: 0.9; font-size: 0.95em;">${mensagemDica}</p>
         </div>
     `;
-} // <-- CHAVE ADICIONADA: Corrige o encerramento da função calcularCarbono()
+}
