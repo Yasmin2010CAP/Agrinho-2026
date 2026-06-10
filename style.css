@@ -21,18 +21,27 @@
     --cor-borda: #1b4332; /* Alterado: Borda escura para dar definição aos elementos */
 }
 
-/* MODO NOTURNO / ALTO CONTRASTE*/ 
+/* MODO NOTURNO MODERNO E SOFISTICADO (ALTERADO) */ 
 body.alto-contraste {
-    --cor-fundo-geral: #011402;
-    --cor-fundo-card: #023306;
+    /* Fundo grafite escuro com leve toque esmeralda (substitui o preto total) */
+    --cor-fundo-geral: #121614; 
+    
+    /* Cards em cinza-antracite escuro para criar profundidade elegante */
+    --cor-fundo-card: #1a201e; 
 
-    --cor-texto-claro: #d9f99d;
-    --cor-texto-escuro: #a3e635;
-    --cor-destaque: #a3e635;
-    --cor-botao-fundo: #000000; 
-    --cor-botao-texto: #a3e635; 
+    /* Textos em tons suaves de off-white e menta fosco para eliminar o efeito neon nos olhos */
+    --cor-texto-claro: #e4e9e7; 
+    --cor-texto-escuro: #a3b8b0; 
+    
+    /* Destaques em verde-esmeralda tecnológico e nítido */
+    --cor-destaque: #4ade80; 
+    
+    /* Botões pretos com bordas cinzas e textos claros */
+    --cor-botao-fundo: #242b28; 
+    --cor-botao-texto: #4ade80; 
 
-    --cor-borda: #65a30d;
+    /* Bordas sutis para separar os elementos sem agredir a visão */
+    --cor-borda: #2d3733; 
 }
 
 /* CONFIGURAÇÕES GERAIS */
@@ -53,7 +62,6 @@ header {
     background-color: var(--cor-fundo-card);
     border-bottom: 3px solid var(--cor-borda);
 }
-
 
 header h1 {
     font-family: 'Orbitron', sans-serif;
@@ -120,7 +128,7 @@ main {
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    color: #ffffff; /* Garante que textos comuns do post fiquem brancos e legíveis */
+    color: var(--cor-texto-claro); /* Ajustado para respeitar o tema noturno atual */
 }
 
 .post h2 {
@@ -144,6 +152,13 @@ input {
     box-sizing: border-box;
     background-color: #f1f5f9;
     color: #000000; /* Texto digitado em preto para contraste perfeito */
+}
+
+/* Ajuste específico para o input não sumir no modo escuro */
+body.alto-contraste input {
+    background-color: #242b28;
+    color: #ffffff;
+    border-color: var(--cor-borda);
 }
 
 /* BOTÕES DOS POSTS */
