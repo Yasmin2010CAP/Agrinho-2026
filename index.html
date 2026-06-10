@@ -1,126 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- CONFIGURAÇÕES DO SITE -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Agrinho 2026 - Início</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f0;
-            color: #333333;
-            transition: background-color 0.3s, color 0.3s;
-        }
 
-        body.modo-escuro {
-            background-color: #121212;
-            color: #ffffff;
-        }
+    <title>AgroForte Sustentável</title>
 
-        .topo {
-            background-color: #1b4d3e;
-            color: #ffffff;
-            padding: 25px;
-            text-align: left;
-        }
+    <!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-        .topo h1 {
-            margin: 0;
-            font-size: 30px;
-        }
-
-        .menu {
-            background-color: #654321;
-            padding: 12px;
-            text-align: center;
-        }
-
-        .menu a {
-            color: #ffffff;
-            margin: 0 15px;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .menu a:hover {
-            color: #50c878;
-        }
-
-        .menu a.pagina-atual {
-            font-weight: bold;
-            border-bottom: 2px solid #ffffff;
-        }
-
-        .banner {
-            background-color: #1b4d3e;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .btn-interativo {
-            background-color: #50c878;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 14px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin: 20px auto;
-            display: block;
-            transition: background-color 0.2s;
-        }
-
-        .btn-interativo:hover {
-            background-color: #1b4d3e;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .texto-principal {
-            font-size: 18px;
-            line-height: 1.8;
-            text-align: justify;
-            margin-bottom: 25px;
-        }
-
-        .rodape {
-            background-color: #1b4d3e;
-            color: #ffffff;
-            text-align: center;
-            padding: 30px 10px;
-            margin-top: 40px;
-        }
-
-        .rodape p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        @media (max-width: 600px) {
-            .topo h1 { font-size: 24px; }
-            .menu a { display: block; margin: 10px 0; }
-            .texto-principal { font-size: 16px; }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="topo">
-        <h1>Header do Site - Agrinho 2026</h1>
+    <!-- CABEÇALHO -->
+    <header>
+        <!-- Procure a tag da imagem dentro do <header> e substitua por esta: -->
+            <img src="img/logo1.jpg" id="logo" class="logo-site" alt="logo do site">
+
+
+        <div class="acessibilidade-container">
+            <button id="btn-contraste" class="btn-util">
+                modo-noturno
+            </button>
+        </div>
+
+        <h1>Agroforte, futuro sustentável</h1>
+
+        <h2>
+            Equilíbrio entre produção e meio ambiente
+        </h2>
+
+        <p class="autores">
+            Leonardo Rodrigues nº19<br>
+            Colégio de Aplicação Pedagógica - Universidade Estadual de Maringá.
+        </p>
+
     </header>
 
+    <!-- MENU DE NAVEGAÇÃO -->
     <nav class="menu">
-        <a href="index.html" class="pagina-atual">Início</a>
-        <a href="projeto.html">O Projeto</a>
-        <a href="sustentabilidade.html">Sustentabilidade</a>
-        <a href="contato.html">Contato</a>
+
+        <button onclick="mostrarPagina('pagina1')">
+            Calculadora Carbono
+        </button>
+
+        <button onclick="mostrarPagina('pagina2')">
+            MIP
+        </button>
+
+        <button onclick="mostrarPagina('pagina3')">
+            ABC
+        </button>
+
+        <button onclick="mostrarPagina('pagina4')">
+            Bioenergia
+        </button>
+
     </nav>
 
-    <section class="banner">
-        <h1 style="color: #ffffff; font-size: 42px; font-weight: bold; text-transform: uppercase; padding: 0 20px; margin-top: 0; margin-bottom: 15px; line-height: 1.2;">Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h1>
-        <p style="color: #e0e0e0; font-
+    <!--  CONTEÚDO PRINCIPAL  -->
+    <main>
+
+        <!-- PÁGINA 1 -->
+        <section id="pagina1" class="pagina ativa">
+
+            <div class="post">
+
+                <h2>Calculadora de Carbono</h2>
+
+                <p>
+                    Descubra uma estimativa de emissão de carbono da fazenda.
+                </p>
+
+                <label>Quantidade de tratores:</label>
+                <input type="number" id="tratores">
+
+                <label>Litros de combustível por mês:</label>
+                <input type="number" id="combustivel">
+
+                <label>Quantidade de animais:</label>
+                <input type="number" id="animais">
+
+                <button onclick="calcularCarbono()">
+                    Calcular Carbono
+                </button>
+
+                <div id="resultado-carbono"></div>
+
+            </div>
+
+        </section>
+
+        <!-- PÁGINA 2 -->
+        <section id="pagina2" class="pagina">
+
+            <div class="post">
+
+                <h2> MIP (Manejo Integrado de Pragas)</h2>
+
+                <p>
+                   O que é: <br>
+                   O MIP é um modelo estratégico e multifacetado de tomada de decisão
+                   voltado ao controle de pragas agrícolas (insetos, ácaros, doenças e plantas daninhas).
+                </p>
+                <p>
+                    Em vez de simplesmente aplicar defensivos de forma reativa ao primeiro sinal de
+                    é um modelo estratégico e multifacetado de tomada de decisão voltado ao controle de pragas agrícolas (insetos, ácaros, doenças e plantas daninhas).
+                </p>
+                <p>
+                    Em vez de simplesmente aplicar defensivos de forma reativa ao primeiro sinal de ameaça, o MIP analisa o ecossistema da lavoura como um todo. 
+                    Ele integra pilares como o controle biológico, cultural, comportamental, genético, varietal e químico.
+                </p>
+                <p>
+                    O objetivo é diminuir prejuízos e reduzir impactos ambientais.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- PÁGINA 3 -->
+        <section id="pagina3" class="pagina">
+
+            <div class="post">
+
+                <h2>ABC (Plano / Programa Agricultura de Baixa Emissão de Carbono)</h2>
+
+                <p>
+                    O que é: <br>
+                    O Plano ABC (atualmente chamado de Plano ABC+) é uma política pública do governo brasileiro que planeja e organiza as ações para a adoção de tecnologias de produção sustentáveis no campo. 
+                </p>
+                <p>
+                    É uma das principais iniciativas voltadas à sustentabilidade climática no agronegócio. 
+                </p>
+                <p>
+                    Para que serve: <br>
+                    Serve para incentivar e financiar práticas agrícolas que reduzam a emissão de gases de efeito estufa (GEE) e aumentem a fixação de carbono no solo. Ele financia técnicas como o Sistema Plantio Direto, a Integração Lavoura-Pecuária-Floresta (ILPF) e a recuperação de pastagens degradadas. <br>
+                    Ele financia técnicas como o Sistema Plantio Direto, a Integração Lavoura-Pecuária-Floresta (ILPF) e a recuperação de pastagens degradadas.
+                </p>
+                <p>
+                    Essas técnicas ajudam o produtor e o meio ambiente ao mesmo tempo.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- PÁGINA 4 -->
+        <section id="pagina4" class="pagina">
+
+            <div class="post">
+
+                <h2>Bioenergia</h2>
+
+                <p>
+                    O que é: <br>
+                    A bioenergia é a energia obtida por meio da biomassa, que é toda matéria orgânica renovável de origem vegetal ou animal.<br>
+                    xemplos comuns de matéria-prima incluem o bagaço da cana-de-açúcar, resíduos de madeira, cascas de grãos e dejetos de animais.
+                </p>
+                <p>
+                    Para que serve: <br>Serve para substituir o uso de combustíveis fósseis poluentes.<br>
+                    Ela é usada na produção de biocombustíveis (como etanol e biodiesel), na geração de eletricidade (através da queima de biomassa em termoelétricas) e na produção de calor industrial ou residencial. 
+
+                </p>
+
+                <p>
+                    A bioenergia reduz a poluição e ajuda no aproveitamento
+                    de resíduos agrícolas.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>Agrinho - 2026</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
