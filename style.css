@@ -1,27 +1,27 @@
 /* VARIÁVEIS DE CORES */
 :root {
-    /* NOVO VERDE MAIS SUAVE PARA OS OLHOS */
-    --cor-fundo-geral: #e2ede4; /* Verde sálvia pastel bem suave, evita o brilho do branco */
+    /* NOVO VERDE MAIS SUAVE PARA OS OLHOS - AGORA NÍTIDO E CLARO */
+    --cor-fundo-geral: #f4f7f4; /* Um off-white levemente esverdeado, excelente contraste */
 
     /* VERDE DOS CARDS */
-    --cor-fundo-card: #cddbc0; /* Tom pastel fosco para descansar a vista */
+    --cor-fundo-card: #ffffff; /* Fundo totalmente branco para os cards se destacarem perfeitamente */
 
     /* TEXTOS */
-    --cor-texto-claro: #1b4332; /* Verde floresta escuro para forte contraste sobre o fundo sálvia */
-    --cor-texto-escuro: #2d5a27; /* Verde mate escuro para sub-títulos */
+    --cor-texto-claro: #1c352d; /* Verde floresta bem escuro para leitura nítida no fundo claro */
+    --cor-texto-escuro: #2d4a3e; /* Tom escuro secundário */
 
     /* DESTAQUES */
-    --cor-destaque: #1e4620; /* Verde escuro fechado focado em leitura confortável */
+    --cor-destaque: #1b4332; /* Verde bem escuro e forte para títulos chamarem atenção */
 
     /* BOTÕES */
-    --cor-botao-fundo: #1b4332; /* Mantido o verde bem escuro original */
-    --cor-botao-texto: #f4f9f1; /* Creme sutil para não contrastar agressivamente no botão escuro */
+    --cor-botao-fundo: #1b4332; /* Mantido o seu verde escuro original */
+    --cor-botao-texto: #ffffff; /* Texto branco puro para contraste perfeito dentro do botão escuro */
 
     /* BORDAS */
-    --cor-borda: #a3b899; /* Linha sutil verde-oliva clara */
+    --cor-borda: #cbd5e1; /* Cinza claro sutil para separar os elementos com elegância */
 }
 
-/* MODO NOTURNO / ALTO CONTRASTE*/ 
+/* MODO NOTURNO / ALTO CONTRASTE */ 
 body.alto-contraste {
     --cor-fundo-geral: #011402;
     --cor-fundo-card: #023306;
@@ -51,7 +51,7 @@ header {
     text-align: center;
     padding: 30px;
     background-color: var(--cor-fundo-card);
-    border-bottom: 3px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda); /* Reduzido para 1px para ficar mais limpo */
 }
 
 /*logo do site*/
@@ -59,23 +59,23 @@ header {
     max-width: 150px;       /* Controla a largura máxima da logo */
     height: auto;           /* Mantém a proporção original da imagem */
     border-radius: 50%;     /* Deixa a logo redonda */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave no tema claro */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra mais suave para fundos claros */
     margin-bottom: 15px;    /* Espaço entre a logo e o botão/título */
-    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave de efeitos */
-    display: block;         /* Permite centralizar com margin */
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    display: block;         
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Efeito ao passar o mouse na logo */
 .logo-site:hover {
-    transform: scale(1.05); /* Dá um leve zoom ao passar o mouse */
+    transform: scale(1.05); 
 }
 
 /* Ajuste visual da logo no modo noturno (Opcional) */
 body.alto-contraste .logo-site {
-    border: 2px solid var(--cor-borda); /* Adiciona uma borda brilhante no modo escuro */
-    filter: brightness(0.9);            /* Reduz levemente o brilho para não ofuscar */
+    border: 2px solid var(--cor-borda); 
+    filter: brightness(0.9);            
 }
 
 header h1 {
@@ -89,7 +89,7 @@ header h2 {
 }
 
 .autores {
-    color: var(--cor-destaque);
+    color: var(--cor-texto-escuro);
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -103,7 +103,7 @@ header h2 {
 
 .menu button {
     padding: 12px 20px;
-    border: 2px solid var(--cor-borda);
+    border: 1px solid var(--cor-botao-fundo);
     background-color: var(--cor-botao-fundo);
     color: var(--cor-botao-texto);
     cursor: pointer;
@@ -114,8 +114,8 @@ header h2 {
 
 .menu button:hover {
     transform: scale(1.05);
-    background-color: var(--cor-texto-claro);
-    color: var(--cor-fundo-geral);
+    background-color: #2d6a4f; /* Verde um pouco mais claro no hover para dar feedback */
+    color: #ffffff;
 }
 
 /* PÁGINAS */
@@ -142,8 +142,7 @@ main {
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra reduzida para não pesar na vista */
-    color: var(--cor-texto-escuro);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04); /* Sombra leve e moderna */
 }
 
 .post h2 {
@@ -163,17 +162,17 @@ input {
     margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 6px;
-    border: 2px solid var(--cor-borda);
+    border: 1px solid var(--cor-borda);
     box-sizing: border-box;
-    background-color: #f4f8f5; /* Off-white esverdeado antiofuscamento */
-    color: var(--cor-texto-claro);
+    background-color: #f8fafc;
+    color: #000000;
 }
 
 /* BOTÕES DOS POSTS */
 .post button {
     width: 100%;
     padding: 12px;
-    border: 2px solid var(--cor-borda);
+    border: none;
     background-color: var(--cor-botao-fundo);
     color: var(--cor-botao-texto);
     font-weight: bold;
@@ -183,22 +182,23 @@ input {
 }
 
 .post button:hover {
-    background-color: var(--cor-texto-claro);
-    color: var(--cor-fundo-geral);
+    background-color: #2d6a4f;
+    color: #ffffff;
 }
 
 /* DIVISOR */
 .divisor {
     margin: 20px 0;
-    border: 1px solid var(--cor-borda);
+    border: 0;
+    border-top: 1px solid var(--cor-borda);
 }
 
 /* RODAPÉ */
 footer {
     text-align: center;
-    padding: 10px 20px;
+    padding: 20px;
     background-color: var(--cor-fundo-card);
-    border-top: 3px solid var(--cor-borda);
+    border-top: 1px solid var(--cor-borda);
     color: var(--cor-texto-escuro);
 }
 
@@ -212,7 +212,7 @@ footer {
     padding: 8px 12px !important;
     background-color: var(--cor-botao-fundo) !important; 
     color: var(--cor-botao-texto) !important;            
-    border: 2px solid var(--cor-borda) !important;       
+    border: none !important;       
     cursor: pointer;                                     
     border-radius: 6px;
     font-weight: bold;
