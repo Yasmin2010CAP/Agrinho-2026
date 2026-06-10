@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Agrinho 2026 - Início</title>
     <style>
+        /* Estilos gerais do site */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -13,11 +14,13 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
+        /* Configuração do Modo Escuro */
         body.modo-escuro {
             background-color: #121212;
             color: #ffffff;
         }
 
+        /* Topo do site */
         .topo {
             background-color: #1b4d3e;
             color: #ffffff;
@@ -30,6 +33,7 @@
             font-size: 30px;
         }
 
+        /* Menu de abas */
         .menu {
             background-color: #654321;
             padding: 12px;
@@ -52,6 +56,7 @@
             border-bottom: 2px solid #ffffff;
         }
 
+        /* Banner com o título principal */
         .banner {
             background-color: #1b4d3e;
             padding: 40px 20px;
@@ -81,6 +86,7 @@
             box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
         }
 
+        /* Botão interativo */
         .btn-interativo {
             background-color: #50c878;
             color: #ffffff;
@@ -91,8 +97,14 @@
             cursor: pointer;
             margin: 20px auto;
             display: block;
+            transition: background-color 0.2s;
         }
 
+        .btn-interativo:hover {
+            background-color: #1b4d3e;
+        }
+
+        /* Bloco de conteúdo centralizado */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -106,6 +118,7 @@
             margin-bottom: 25px;
         }
 
+        /* Rodapé */
         .rodape {
             background-color: #1b4d3e;
             color: #ffffff;
@@ -114,6 +127,12 @@
             margin-top: 40px;
         }
 
+        .rodape p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Ajustes para telas de celular */
         @media (max-width: 600px) {
             .topo h1 { font-size: 24px; }
             .banner-titulo { font-size: 24px; }
@@ -139,7 +158,7 @@
         <h2 class="banner-titulo">Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h2>
         <p class="banner-subtitulo">Tecnologia e consciência transformando o futuro da nossa agricultura.</p>
         
-        <img src="img/image.png" alt="Equilíbrio entre produção e meio ambiente" class="banner-foto">
+        <img src="image.png" alt="Equilíbrio entre produção e meio ambiente" class="banner-foto">
     </section>
 
     <button id="btn-modo" class="btn-interativo">🌙 Alternar Visualização</button>
@@ -164,8 +183,10 @@
 
     <script>
         const botaoModo = document.getElementById('btn-modo');
+        
         botaoModo.addEventListener('click', function() {
             document.body.classList.toggle('modo-escuro');
+            
             if (document.body.classList.contains('modo-escuro')) {
                 botaoModo.innerText = "☀️ Ativar Modo Claro";
             } else {
