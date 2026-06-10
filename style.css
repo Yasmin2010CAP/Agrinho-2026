@@ -1,38 +1,38 @@
 /* VARIÁVEIS DE CORES */
 :root {
     /* NOVO VERDE MAIS SUAVE PARA OS OLHOS */
-    --cor-fundo-geral: #f0fdf4; /* Verde extra claro */
+    --cor-fundo-geral: #e2ede4; /* Verde sálvia pastel bem suave, evita o brilho do branco */
 
     /* VERDE DOS CARDS */
-    --cor-fundo-card: #bbf7d0; /* Verde claro alerta/suave */
+    --cor-fundo-card: #cddbc0; /* Tom pastel fosco para descansar a vista */
 
     /* TEXTOS */
-    --cor-texto-claro: #14532d; /* Verde escuro extra para contraste no fundo claro */
-    --cor-texto-escuro: #166534; /* Verde escuro forte */
+    --cor-texto-claro: #1b4332; /* Verde floresta escuro para forte contraste sobre o fundo sálvia */
+    --cor-texto-escuro: #2d5a27; /* Verde mate escuro para sub-títulos */
 
     /* DESTAQUES */
-    --cor-destaque: #15803d; /* Verde escuro médio */
+    --cor-destaque: #1e4620; /* Verde escuro fechado focado em leitura confortável */
 
     /* BOTÕES */
-    --cor-botao-fundo: #22c55e; /* Verde principal */
-    --cor-botao-texto: #ffffff; /* Texto branco para leitura */
+    --cor-botao-fundo: #1b4332; /* Mantido o verde bem escuro original */
+    --cor-botao-texto: #f4f9f1; /* Creme sutil para não contrastar agressivamente no botão escuro */
 
     /* BORDAS */
-    --cor-borda: #86efac; /* Verde claro médio */
+    --cor-borda: #a3b899; /* Linha sutil verde-oliva clara */
 }
 
-/* MODO NOTURNO / ALTO CONTRASTE */ 
+/* MODO NOTURNO / ALTO CONTRASTE*/ 
 body.alto-contraste {
-    --cor-fundo-geral: #14532d; /* Invertido: Fundo escuro */
-    --cor-fundo-card: #166534; /* Card escuro */
+    --cor-fundo-geral: #011402;
+    --cor-fundo-card: #023306;
 
-    --cor-texto-claro: #f0fdf4; /* Texto claro no fundo escuro */
-    --cor-texto-escuro: #bbf7d0;
-    --cor-destaque: #86efac;
-    --cor-botao-fundo: #22c55e; 
-    --cor-botao-texto: #ffffff; 
+    --cor-texto-claro: #d9f99d;
+    --cor-texto-escuro: #a3e635;
+    --cor-destaque: #a3e635;
+    --cor-botao-fundo: #000000; 
+    --cor-botao-texto: #a3e635; 
 
-    --cor-borda: #15803d;
+    --cor-borda: #65a30d;
 }
 
 /* CONFIGURAÇÕES GERAIS */
@@ -59,7 +59,7 @@ header {
     max-width: 150px;       /* Controla a largura máxima da logo */
     height: auto;           /* Mantém a proporção original da imagem */
     border-radius: 50%;     /* Deixa a logo redonda */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar destaque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave no tema claro */
     margin-bottom: 15px;    /* Espaço entre a logo e o botão/título */
     transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave de efeitos */
     display: block;         /* Permite centralizar com margin */
@@ -114,8 +114,8 @@ header h2 {
 
 .menu button:hover {
     transform: scale(1.05);
-    background-color: var(--cor-intermediario, #16a34a);
-    color: white;
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-fundo-geral);
 }
 
 /* PÁGINAS */
@@ -142,7 +142,7 @@ main {
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra reduzida para não pesar na vista */
     color: var(--cor-texto-escuro);
 }
 
@@ -165,8 +165,8 @@ input {
     border-radius: 6px;
     border: 2px solid var(--cor-borda);
     box-sizing: border-box;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #f4f8f5; /* Off-white esverdeado antiofuscamento */
+    color: var(--cor-texto-claro);
 }
 
 /* BOTÕES DOS POSTS */
@@ -183,8 +183,8 @@ input {
 }
 
 .post button:hover {
-    background-color: var(--cor-intermediario, #16a34a);
-    color: white;
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-fundo-geral);
 }
 
 /* DIVISOR */
