@@ -84,13 +84,14 @@ function calcularCarbono() {
         mensagemDica = "Alerta de altas emissões! Considere o uso de Bioenergia para substituir combustíveis fósseis e aplique o MIP.";
     }
 
- // Exibe o bloco de resultados alterando a propriedade display do CSS e inserindo o HTML interno
+// Exibe o bloco de resultados alterando a propriedade display do CSS e inserindo o HTML interno
 resultado.style.display = "block";
 resultado.innerHTML = `
     <div style="margin-top: 20px; padding: 15px; border: 2px solid var(--cor-borda); border-radius: 8px; background-color: #ffffff; color: #1c352d; text-align: left;">
-        <h3 style="color: #ffffff; margin-top: 0; font-family: 'Orbitron', sans-serif;">Resultado da Análise:</h3>
+        <h3 style="color: #1b4332; margin-top: 0; font-family: 'Orbitron', sans-serif;">Resultado da Análise:</h3>
         <p style="margin: 8px 0; color: #000000;">A estimativa de emissão é de: <strong>${carbono.toFixed(2)} kg de carbono</strong>.</p>
         <p style="margin: 8px 0; color: #000000;">Status do Impacto: <span style="color: ${corTexto}; font-weight: bold; font-size: 1.1em;">${classificacao}</span></p>
         <p style="font-style: italic; margin-top: 12px; margin-bottom: 0; color: #555555; opacity: 0.9; font-size: 0.95em;">${mensagemDica}</p>
     </div>
-`;
+`; // <-- A crase, o ponto e vírgula corrigem o erro de sintaxe
+
