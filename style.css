@@ -1,38 +1,38 @@
 /* VARIÁVEIS DE CORES */
 :root {
     /* NOVO VERDE MAIS SUAVE PARA OS OLHOS */
-    --cor-fundo-geral: #6fa874;
+    --cor-fundo-geral: #f0fdf4; /* Verde extra claro */
 
     /* VERDE DOS CARDS */
-    --cor-fundo-card: #4f8f57;
+    --cor-fundo-card: #bbf7d0; /* Verde claro alerta/suave */
 
     /* TEXTOS */
-    --cor-texto-claro: #f1f5f9;
-    --cor-texto-escuro: #d9f99d;
+    --cor-texto-claro: #14532d; /* Verde escuro extra para contraste no fundo claro */
+    --cor-texto-escuro: #166534; /* Verde escuro forte */
 
     /* DESTAQUES */
-    --cor-destaque: #d9f99d;
+    --cor-destaque: #15803d; /* Verde escuro médio */
 
     /* BOTÕES */
-    --cor-botao-fundo: #1b4332;
-    --cor-botao-texto: #d9f99d;
+    --cor-botao-fundo: #22c55e; /* Verde principal */
+    --cor-botao-texto: #ffffff; /* Texto branco para leitura */
 
     /* BORDAS */
-    --cor-borda: #d9f99d;
+    --cor-borda: #86efac; /* Verde claro médio */
 }
 
-/* MODO NOTURNO / ALTO CONTRASTE*/ 
+/* MODO NOTURNO / ALTO CONTRASTE */ 
 body.alto-contraste {
-    --cor-fundo-geral: #011402;
-    --cor-fundo-card: #023306;
+    --cor-fundo-geral: #14532d; /* Invertido: Fundo escuro */
+    --cor-fundo-card: #166534; /* Card escuro */
 
-    --cor-texto-claro: #d9f99d;
-    --cor-texto-escuro: #a3e635;
-    --cor-destaque: #a3e635;
-    --cor-botao-fundo: #000000; 
-    --cor-botao-texto: #a3e635; 
+    --cor-texto-claro: #f0fdf4; /* Texto claro no fundo escuro */
+    --cor-texto-escuro: #bbf7d0;
+    --cor-destaque: #86efac;
+    --cor-botao-fundo: #22c55e; 
+    --cor-botao-texto: #ffffff; 
 
-    --cor-borda: #65a30d;
+    --cor-borda: #15803d;
 }
 
 /* CONFIGURAÇÕES GERAIS */
@@ -58,7 +58,7 @@ header {
 .logo-site {
     max-width: 150px;       /* Controla a largura máxima da logo */
     height: auto;           /* Mantém a proporção original da imagem */
-    border-radius: 50%;     /* Deixa a logo redonda (remova se preferir quadrada) */
+    border-radius: 50%;     /* Deixa a logo redonda */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar destaque */
     margin-bottom: 15px;    /* Espaço entre a logo e o botão/título */
     transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave de efeitos */
@@ -85,6 +85,7 @@ header h1 {
 
 header h2 {
     font-size: 1rem;
+    color: var(--cor-texto-escuro);
 }
 
 .autores {
@@ -113,8 +114,8 @@ header h2 {
 
 .menu button:hover {
     transform: scale(1.05);
-    background-color: var(--cor-botao-texto);
-    color: black;
+    background-color: var(--cor-intermediario, #16a34a);
+    color: white;
 }
 
 /* PÁGINAS */
@@ -141,7 +142,8 @@ main {
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: var(--cor-texto-escuro);
 }
 
 .post h2 {
@@ -163,7 +165,8 @@ input {
     border-radius: 6px;
     border: 2px solid var(--cor-borda);
     box-sizing: border-box;
-    background-color: #f1f5f9;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* BOTÕES DOS POSTS */
@@ -180,8 +183,8 @@ input {
 }
 
 .post button:hover {
-    background-color: var(--cor-botao-texto);
-    color: black;
+    background-color: var(--cor-intermediario, #16a34a);
+    color: white;
 }
 
 /* DIVISOR */
@@ -196,6 +199,7 @@ footer {
     padding: 10px 20px;
     background-color: var(--cor-fundo-card);
     border-top: 3px solid var(--cor-borda);
+    color: var(--cor-texto-escuro);
 }
 
 /* BOTÃO UTIL DE ACESSIBILIDADE */
